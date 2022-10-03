@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
 
 :root{
     --ghost-white: #f8f9fd;
@@ -47,16 +47,17 @@ a{
 /* end of resets and reusable stylings  */
 
 /* header */
-header{
-    background: var(--ghost-white);
+
+header {
+    background: url(./images/header-img.jpg) no-repeat center/cover;
+    min-height: 70vh;
+    max-width: auto;
 }
-header .container{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
+
 .navbar{
     position: fixed;
+    display: flex;
+    justify-content: space-around;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -65,19 +66,19 @@ header .container{
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
     width: 100%;
-    padding: 1.5rem 1rem!important;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    /* padding: 1.5rem 1rem!important; */
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr); */
     align-items: center;
     padding: 1.5rem 0;
     background: var(--ghost-white);
     z-index: 999;
 }
 .navbar-brand{
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 2rem;
     color: var(--granite-gray);
     justify-self: flex-start;
+    font-family: 'Rubik Dirt', cursive;;
 }
 .navbar-toggler{
     justify-self: center;
@@ -396,6 +397,9 @@ header .container{
 footer{
     background-color: var(--baltic-sea);
 }
+.footer-logo {
+
+}
 .footer-banner{
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/footer-banner.jpg) center/cover no-repeat;
     padding: 3rem 0;
@@ -471,7 +475,7 @@ footer > .container{
     }
 }
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 1000px){
     .navbar{
         padding: 1.5rem 6rem!important;
     }

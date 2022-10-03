@@ -79,7 +79,6 @@ function getProductInfo(product) {
     id: cartItemID,
     imgSrc: product.querySelector(".product-img img").src,
     name: product.querySelector(".product-name").textContent,
-    // category: product.querySelector(".product-category").textContent,
     price: product.querySelector(".product-price").textContent,
   };
   cartItemID++;
