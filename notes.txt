@@ -1,5 +1,2 @@
-- change navbar bg colour
-- Include header image
 - prices should include comma (perhaps change watches costs)
-- have a go to basket feature on page
 - clean up code
