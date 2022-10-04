@@ -1,42 +1,42 @@
 [
     {
         "name" : "Audemars",
-        "price" : "20000",
+        "price" : "2000",
         "imgSrc" : "images/audemars.png"
     },
     {
         "name" : "Carrera",
-        "price" : "2500",
+        "price" : "1500",
         "imgSrc" : "images/carrera.png"
     },
     {
         "name" : "Fossil",
-        "price" : "500",
+        "price" : "550",
         "imgSrc" : "images/fossil.jpg"
     },
     {
         "name" : "Hublot",
-        "price" : "8000",
+        "price" : "800",
         "imgSrc" : "images/hublot.png"
     },
     {
         "name" : "Omega",
-        "price" : "10000",
+        "price" : "1000",
         "imgSrc" : "images/omega.png"
     },
     {
         "name" : "Rolex Date Just ",
-        "price" : "12000",
+        "price" : "1200",
         "imgSrc" : "images/rolex-datejust.png"
     },
     {
         "name" : "Rolex Day Date",
-        "price" : "10000",
+        "price" : "1200",
         "imgSrc" : "images/rolex-daydate.png"
     },
     {
         "name" : "Tissot",
-        "price" : "500",
+        "price" : "580",
         "imgSrc" : "images/tissot.png"
     }
 ]

@@ -141,7 +141,7 @@ function loadCart() {
 function findCartInfo() {
   let products = getProductFromStorage();
   let total = products.reduce((acc, product) => {
-    let price = parseFloat(product.price.substr(1)); // removing dollar sign
+    let price = parseFloat(product.price.substr(1)); // removing pound sign
     return (acc += price);
   }, 0); // adding all the prices
 
