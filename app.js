@@ -1,4 +1,4 @@
-// variables and constants
+// dom variables
 const cartContainer = document.querySelector(".cart-container");
 const productList = document.querySelector(".product-list");
 const cartList = document.querySelector(".cart-list");
@@ -9,6 +9,7 @@ let cartItemID = 1;
 eventListeners();
 
 // all event listeners
+// loads product data
 function eventListeners() {
   window.addEventListener("DOMContentLoaded", () => {
     loadJSON();
@@ -29,7 +30,7 @@ function eventListeners() {
 
 // update cart info
 function updateCartInfo() {
-  let cartInfo = findCartInfo();
+  let cartInfo = calculateCart();
   cartCountInfo.textContent = cartInfo.productCount;
   cartTotalValue.textContent = cartInfo.total;
 }
@@ -124,13 +125,13 @@ function getProductFromStorage() {
 // load carts product
 function loadCart() {
   let products = getProductFromStorage();
-  if (products.length < 1) {
-    cartItemID = 1; // if there is no any product in the local storage
-  } else {
-    cartItemID = products[products.length - 1].id;
-    cartItemID++;
-    // else get the id of the last product and increase it by 1
-  }
+  // if (products.length < 1) {
+  //   cartItemID = 1; // if there is no any product in the local storage
+  // } else {
+  //   cartItemID = products[products.length - 1].id;
+  //   cartItemID++;
+  //   // else get the id of last product and increase by 1
+  // }
   products.forEach(product => addToCartList(product));
 
   // calculate and update UI of cart info
@@ -138,7 +139,7 @@ function loadCart() {
 }
 
 // calculate total price of the cart and other info
-function findCartInfo() {
+function calculateCart() {
   let products = getProductFromStorage();
   let total = products.reduce((acc, product) => {
     let price = parseFloat(product.price.substr(1)); // removing pound sign
